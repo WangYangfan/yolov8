@@ -38,11 +38,13 @@ create yml
 touch mydata.yml
 ```
 
-## Clone Repo and run
+## Clone YOLOv8 Repo
 
 ```bash
 git clone git@github.com:ultralytics/ultralytics.git
 ```
+
+## Run Examples
 
 run train example:
 
