@@ -1,0 +1,6 @@
+train: /home/wangyf/yolov8/mydata/train/images
+val: /home/wangyf/yolov8/mydata/valid/images
+
+nc: 10
+
+names: ['car', 'bus', 'person', 'bike', 'truck', 'motor', 'train', 'rider', 'traffic sign', 'traffic light']
