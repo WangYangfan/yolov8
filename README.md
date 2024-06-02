@@ -53,113 +53,46 @@ yolo task=detect mode=train model=yolov8n.pt data=mydata.yml batch=32 epochs=10 
 ```
 
 ```
-Ultralytics YOLOv8.2.27 馃殌 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
+Ultralytics YOLOv8.2.27 🚀 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
 engine/trainer: task=detect, mode=train, model=yolov8n.pt, data=mydata.yml, epochs=10, time=None, patience=100, batch=32, imgsz=640, save=True, save_period=-1, cache=False, device=0, workers=10, project=None, name=train2, exist_ok=False, pretrained=True, optimizer=auto, verbose=True, seed=0, deterministic=True, single_cls=False, rect=False, cos_lr=False, close_mosaic=10, resume=False, amp=True, fraction=1.0, profile=False, freeze=None, multi_scale=False, overlap_mask=True, mask_ratio=4, dropout=0.0, val=True, split=val, save_json=False, save_hybrid=False, conf=None, iou=0.7, max_det=300, half=False, dnn=False, plots=True, source=None, vid_stride=1, stream_buffer=False, visualize=False, augment=False, agnostic_nms=False, classes=None, retina_masks=False, embed=None, show=False, save_frames=False, save_txt=False, save_conf=False, save_crop=False, show_labels=True, show_conf=True, show_boxes=True, line_width=None, format=torchscript, keras=False, optimize=False, int8=False, dynamic=False, simplify=False, opset=None, workspace=4, nms=False, lr0=0.01, lrf=0.01, momentum=0.937, weight_decay=0.0005, warmup_epochs=3.0, warmup_momentum=0.8, warmup_bias_lr=0.1, box=7.5, cls=0.5, dfl=1.5, pose=12.0, kobj=1.0, label_smoothing=0.0, nbs=64, hsv_h=0.015, hsv_s=0.7, hsv_v=0.4, degrees=0.0, translate=0.1, scale=0.5, shear=0.0, perspective=0.0, flipud=0.0, fliplr=0.5, bgr=0.0, mosaic=1.0, mixup=0.0, copy_paste=0.0, auto_augment=randaugment, erasing=0.4, crop_fraction=1.0, cfg=None, tracker=botsort.yaml, save_dir=runs/detect/train2
 runOverriding model.yaml nc=80 with nc=10
 
-                   from  n    params  module                                       arguments                     
-  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]                 
-  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]                
-  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]             
-  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]                
-  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]             
-  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]               
-  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]           
-  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]              
-  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]           
-  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]                 
- 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
- 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
- 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]                 
- 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']          
- 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
- 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]                  
- 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]                
- 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
- 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]                 
- 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]              
- 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                           
- 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]                 
- 22        [15, 18, 21]  1    753262  ultralytics.nn.modules.head.Detect           [10, [64, 128, 256]]          
+                   from  n    params  module                                       arguments                
+  0                  -1  1       464  ultralytics.nn.modules.conv.Conv             [3, 16, 3, 2]            
+  1                  -1  1      4672  ultralytics.nn.modules.conv.Conv             [16, 32, 3, 2]           
+  2                  -1  1      7360  ultralytics.nn.modules.block.C2f             [32, 32, 1, True]        
+  3                  -1  1     18560  ultralytics.nn.modules.conv.Conv             [32, 64, 3, 2]           
+  4                  -1  2     49664  ultralytics.nn.modules.block.C2f             [64, 64, 2, True]        
+  5                  -1  1     73984  ultralytics.nn.modules.conv.Conv             [64, 128, 3, 2]          
+  6                  -1  2    197632  ultralytics.nn.modules.block.C2f             [128, 128, 2, True]      
+  7                  -1  1    295424  ultralytics.nn.modules.conv.Conv             [128, 256, 3, 2]         
+  8                  -1  1    460288  ultralytics.nn.modules.block.C2f             [256, 256, 1, True]      
+  9                  -1  1    164608  ultralytics.nn.modules.block.SPPF            [256, 256, 5]            
+ 10                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']     
+ 11             [-1, 6]  1         0  ultralytics.nn.modules.conv.Concat           [1]                      
+ 12                  -1  1    148224  ultralytics.nn.modules.block.C2f             [384, 128, 1]            
+ 13                  -1  1         0  torch.nn.modules.upsampling.Upsample         [None, 2, 'nearest']     
+ 14             [-1, 4]  1         0  ultralytics.nn.modules.conv.Concat           [1]                      
+ 15                  -1  1     37248  ultralytics.nn.modules.block.C2f             [192, 64, 1]             
+ 16                  -1  1     36992  ultralytics.nn.modules.conv.Conv             [64, 64, 3, 2]           
+ 17            [-1, 12]  1         0  ultralytics.nn.modules.conv.Concat           [1]                      
+ 18                  -1  1    123648  ultralytics.nn.modules.block.C2f             [192, 128, 1]            
+ 19                  -1  1    147712  ultralytics.nn.modules.conv.Conv             [128, 128, 3, 2]         
+ 20             [-1, 9]  1         0  ultralytics.nn.modules.conv.Concat           [1]                      
+ 21                  -1  1    493056  ultralytics.nn.modules.block.C2f             [384, 256, 1]            
+ 22        [15, 18, 21]  1    753262  ultralytics.nn.modules.head.Detect           [10, [64, 128, 256]]     
 Model summary: 225 layers, 3012798 parameters, 3012782 gradients, 8.2 GFLOPs
 
-Transferred 319/355 items from pretrained weights
-Freezing layer 'model.22.dfl.conv.weight'
-AMP: running Automatic Mixed Precision (AMP) checks with YOLOv8n...
-AMP: checks passed 鉁�
-train: Scanning /home/wangyf/yolov8/mydata/train/labels... 2766 images, 0 backgrounds, 0 corrupt: 100%|鈻堚枅鈻堚枅
-train: New cache created: /home/wangyf/yolov8/mydata/train/labels.cache
-val: Scanning /home/wangyf/yolov8/mydata/valid/labels... 692 images, 0 backgrounds, 0 corrupt: 100%|鈻堚枅鈻堚枅鈻堚枅鈻�
-val: New cache created: /home/wangyf/yolov8/mydata/valid/labels.cache
-Plotting labels to runs/detect/train2/labels.jpg... 
-optimizer: 'optimizer=auto' found, ignoring 'lr0=0.01' and 'momentum=0.937' and determining best 'optimizer', 'lr0' and 'momentum' automatically... 
-optimizer: AdamW(lr=0.000714, momentum=0.9) with parameter groups 57 weight(decay=0.0), 64 weight(decay=0.0005), 63 bias(decay=0.0)
-Image sizes 640 train, 640 val
-Using 10 dataloader workers
-Logging results to runs/detect/train2
-Starting training for 10 epochs...
-Closing dataloader mosaic
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       1/10      5.02G      4.488      5.691      3.057        543        640:  16%|鈻堚枌        | 14/87 [00:1Downloading https://ultralytics.com/assets/Arial.ttf to '/home/wangyf/.config/Ultralytics/Arial.ttf'...
-       1/10      5.02G      3.175      3.635      1.624        276        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:2
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.779      0.037     0.0788      0.029
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       2/10      5.12G      2.082      1.914      1.063        223        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:0
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.586      0.147      0.124     0.0534
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       3/10      5.17G      1.963       1.71      1.039        227        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.588      0.148      0.129     0.0572
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       4/10      5.14G      1.903      1.578      1.025        209        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.606       0.16       0.14     0.0663
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       5/10      4.92G       1.86      1.464      1.013        205        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:0
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.386      0.166      0.153     0.0701
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 755k/755k [00:01<00:00, 687kB/s]
-       6/10      4.79G      1.802      1.373     0.9955        200        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.591      0.175      0.163     0.0754
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       7/10      4.58G      1.768      1.314     0.9884        177        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.465       0.18      0.171     0.0789
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       8/10      4.62G      1.714      1.252     0.9787        178        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.562      0.194      0.182     0.0862
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-       9/10       4.5G       1.69      1.211      0.967        231        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.447      0.193      0.194     0.0938
-
-      Epoch    GPU_mem   box_loss   cls_loss   dfl_loss  Instances       Size
-      10/10      4.49G      1.667      1.178     0.9602        253        640: 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 87/87 [00:1
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
-                   all        692      12444      0.566      0.203      0.201     0.0989
+...
 
 10 epochs completed in 0.044 hours.
 Optimizer stripped from runs/detect/train2/weights/last.pt, 6.2MB
 Optimizer stripped from runs/detect/train2/weights/best.pt, 6.2MB
 
 Validating runs/detect/train2/weights/best.pt...
-Ultralytics YOLOv8.2.27 馃殌 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
+Ultralytics YOLOv8.2.27 🚀 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
 Model summary (fused): 168 layers, 3007598 parameters, 0 gradients, 8.1 GFLOPs
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████|
                    all        692      12444      0.559      0.203      0.201     0.0987
                    car        684       6906      0.564       0.45      0.471      0.251
                    bus         97        120       0.41      0.458      0.367       0.22
@@ -172,7 +105,7 @@ Model summary (fused): 168 layers, 3007598 parameters, 0 gradients, 8.1 GFLOPs
          traffic light        382       1671      0.337     0.0738     0.0755     0.0196
 Speed: 0.3ms preprocess, 1.1ms inference, 0.0ms loss, 0.7ms postprocess per image
 Results saved to runs/detect/train2
-馃挕 Learn more at https://docs.ultralytics.com/modes/train
+💡 Learn more at https://docs.ultralytics.com/modes/train
 ```
 
 run valid example:
@@ -182,10 +115,10 @@ yolo task=detect mode=val model=runs/detect/train2/weights/best.pt data=mydata.y
 ```
 
 ```
-Ultralytics YOLOv8.2.27 馃殌 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
+Ultralytics YOLOv8.2.27 🚀 Python-3.9.19 torch-2.3.0+cu121 CUDA:0 (NVIDIA A100-PCIE-40GB, 40377MiB)
 Model summary (fused): 168 layers, 3007598 parameters, 0 gradients, 8.1 GFLOPs
-val: Scanning /home/wangyf/yolov8/mydata/valid/labels.cache... 692 images, 0 backgrounds, 0 corrupt: 100%|鈻�
-                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|鈻堚枅鈻堚枅鈻堚枅鈻堚枅鈻堚枅| 
+val: Scanning /home/wangyf/yolov8/mydata/valid/labels.cache... 692 images, 0 backgrounds, 0 corrupt: 100%|█
+                 Class     Images  Instances      Box(P          R      mAP50  mAP50-95): 100%|██████████|
                    all        692      12444      0.563      0.202      0.201     0.0992
                    car        684       6906      0.568       0.45       0.47      0.251
                    bus         97        120      0.411      0.458      0.369      0.222
@@ -198,7 +131,7 @@ val: Scanning /home/wangyf/yolov8/mydata/valid/labels.cache... 692 images, 0 bac
          traffic light        382       1671      0.343     0.0724     0.0754     0.0195
 Speed: 0.2ms preprocess, 2.5ms inference, 0.0ms loss, 2.5ms postprocess per image
 Results saved to runs/detect/val
-馃挕 Learn more at https://docs.ultralytics.com/modes/val
+💡 Learn more at https://docs.ultralytics.com/modes/val
 ```
 
 
