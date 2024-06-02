@@ -1,0 +1,63 @@
+<?xml version="1.0" ?>
+<annotation>
+    <folder>./bdd100/labels-mini-xml</folder>
+    <filename>0a4411cf-e30aa257</filename>
+    <path/>
+    <source>
+        <database>./bdd100/labels-mini/0a4411cf-e30aa257.json</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>traffic sign</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <Difficult>0</Difficult>
+        <bndbox>
+            <xmin>316</xmin>
+            <ymin>215</ymin>
+            <xmax>333</xmax>
+            <ymax>231</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>traffic sign</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <Difficult>0</Difficult>
+        <bndbox>
+            <xmin>1163</xmin>
+            <ymin>66</ymin>
+            <xmax>1210</xmax>
+            <ymax>112</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>person</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <Difficult>0</Difficult>
+        <bndbox>
+            <xmin>696</xmin>
+            <ymin>269</ymin>
+            <xmax>712</xmax>
+            <ymax>293</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>car</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <Difficult>0</Difficult>
+        <bndbox>
+            <xmin>568</xmin>
+            <ymin>250</ymin>
+            <xmax>643</xmax>
+            <ymax>318</ymax>
+        </bndbox>
+    </object>
+</annotation>
